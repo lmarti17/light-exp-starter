@@ -33,12 +33,14 @@ module.exports = {
 				test: /\.html$/,
 				loader: 'html',
 			},
-			test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)$/,
-			loader: 'url',
-			query: {
-				 limit: 10000,
-				 name: '[name]-[hash:7].[ext]'
-			 },
+			{
+				test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)$/,
+				loader: 'url',
+				query: {
+					 limit: 10000,
+					 name: '[name]-[hash:7].[ext]'
+				 },
+			 }
 		]
 	},
 	plugins: [
